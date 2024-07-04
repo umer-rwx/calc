@@ -40,12 +40,22 @@ h1 {
 }
 
 #display-top {
+    display: flex;
+    justify-content: space-between;
     height: 22px;
     font-size: 16px;
     text-align: right;
     flex: 0.5 0.5 auto;
 
     padding: 4px;
+}
+
+#display-top #number {
+    text-align: right;
+}
+
+#display-top #number {
+    text-align: left;
 }
 
 #display-bottom {

@@ -42,7 +42,7 @@ for (let x = 0; x < operatorButtons.length; x++) {
         }
 
         displayTopOp.textContent = operatorButtons[x].textContent;
-    })
+    });
 }
 
 function operate() {
@@ -70,3 +70,18 @@ function operate() {
     }
     displayBottom.textContent = "";
 }
+
+
+clearButton.addEventListener("click", function() {
+    displayTopNum.textContent = displayTopOp.textContent = displayBottom.textContent = null;
+});
+
+backspaceButton.addEventListener("click", function(){
+    if (displayBottom.textContent == false) {
+        displayTopOp.textContent = null;
+    } else {
+        const arr = displayBottom.textContent.split("");
+        arr.pop();
+        displayBottom.textContent = arr.join("");
+    }
+})
